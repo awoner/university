@@ -1,0 +1,42 @@
+CREATE TABLE registred_users(user_id INT AUTO_INCREMENT PRIMARY KEY,
+                             name VARCHAR(10),
+                             surname VARCHAR(30),
+                             login VARCHAR(10),
+                             user_password VARCHAR(20),
+                             town_id INT,////
+                             group_id INT,
+                             FOREIGN KEY(country_id) REFERENCES towns(town_id) ON DELETE SET NULL,
+                             FOREIGN KEY(group_id) REFERENCES groups(group_id) ON DELETE SET NULL);
+INSERT INTO `registred_users`(`name`,
+                              `surname`,
+                              `login`,
+                              `user_password`,
+                              `town_id`, 
+                              `group_id`) VALUES ('Oleksiy',
+                                                 'Artamonov',
+                                                 'leshaArt322',
+                                                 SHA('1488'),
+                                                 1,
+                                                 1)
+
+CREATE TABLE towns(town_id INT AUTO_INCREMENT PRIMARY KEY,/////
+                       name_of_town VARCHAR(20));
+INSERT INTO `towns`(`name_of_town`) VALUES ('Kiev');
+
+CREATE TABLE users_and_groups(  user_id INT,
+                               	group_id INT,
+				PRIMARY KEY(user_id, group_id),
+                               	FOREIGN KEY(user_id) REFERENCES registred_users(user_id) ON DELETE SET NULL,
+                               	FOREIGN KEY(group_id) REFERENCES groups(group_id) ON DELETE SET NULL);
+
+CREATE TABLE groups(group_id INT AUTO_INCREMENT PRIMARY KEY,
+                    name_of_group VARCHAR(30));
+INSERT INTO `groups`(`name_of_group`) VALUES ('Cars');
+
+ALTER TABLE registred_users ADD FOREIGN KEY(country_id)
+                                REFERENCES countries(country_id)
+                                ON DELETE SET NULL;
+
+ALTER TABLE registred_users ADD FOREIGN KEY (group_id)
+                                REFERENCES users_and_groups(id)
+                                ON DELETE SET NULL;

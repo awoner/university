@@ -1,0 +1,27 @@
+﻿Построение начато 20.06.2017 0:09:05.
+Проект "c:\Users\PC\documents\visual studio 2012\Projects\Calculator(Олексій Гарник)\Calculator(Олексій Гарник)\Calculator(Олексій Гарник).vcxproj" в узле 2 (целевые объекты Build).
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yc"stdafx.h" /Fp"Release\Calculator(Олексій Гарник).pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+  stdafx.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /Zi /nologo /W3 /WX- /sdl /O2 /Oi /Oy- /GL /D WIN32 /D NDEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm- /EHsc /MD /GS /Gy /fp:precise /Zc:wchar_t /Zc:forScope /Yu"stdafx.h" /Fp"Release\Calculator(Олексій Гарник).pch" /Fo"Release\\" /Fd"Release\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt "Calculator(Олексій Гарник).cpp"
+  Calculator(Олексій Гарник).cpp
+Calculator(Олексій Гарник).cpp(14): warning C4369: SIN: значение счетчика "234" не может быть представлено как "char", значение - "-22"
+Calculator(Олексій Гарник).cpp(14): warning C4369: CTAN: значение счетчика "252" не может быть представлено как "char", значение - "-4"
+Calculator(Олексій Гарник).cpp(14): warning C4369: POW: значение счетчика "255" не может быть представлено как "char", значение - "-1"
+Calculator(Олексій Гарник).cpp(16): warning C4369: ConvertToS: значение счетчика "245" не может быть представлено как "char", значение - "-11"
+Calculator(Олексій Гарник).cpp(202): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+Calculator(Олексій Гарник).cpp(211): warning C4244: =: преобразование "double" в "int", возможна потеря данных
+Calculator(Олексій Гарник).cpp(220): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"c:\users\pc\documents\visual studio 2012\Projects\Calculator(Олексій Гарник)\Release\Calculator(Олексій Гарник).exe" /INCREMENTAL:NO /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"c:\users\pc\documents\visual studio 2012\Projects\Calculator(Олексій Гарник)\Release\Calculator(Олексій Гарник).pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"c:\users\pc\documents\visual studio 2012\Projects\Calculator(Олексій Гарник)\Release\Calculator(Олексій Гарник).lib" /MACHINE:X86 /SAFESEH "Release\Calculator(Олексій Гарник).obj"
+  Release\stdafx.obj
+  Создание кода
+c:\users\pc\documents\visual studio 2012\projects\calculator(олексій гарник)\calculator(олексій гарник)\calculator(олексій гарник).cpp(105): warning C4715: get_token: значение возвращается не при всех путях выполнения
+c:\users\pc\documents\visual studio 2012\projects\calculator(олексій гарник)\calculator(олексій гарник)\calculator(олексій гарник).cpp(231): warning C4715: prim: значение возвращается не при всех путях выполнения
+  Создание кода завершено
+  Calculator(Олексій Гарник).vcxproj -> c:\users\pc\documents\visual studio 2012\Projects\Calculator(Олексій Гарник)\Release\Calculator(Олексій Гарник).exe
+Построение проекта "c:\Users\PC\documents\visual studio 2012\Projects\Calculator(Олексій Гарник)\Calculator(Олексій Гарник)\Calculator(Олексій Гарник).vcxproj" завершено (целевые объекты Build).
+
+Построение успешно завершено.
+
+Затраченное время: 00:01:22.76

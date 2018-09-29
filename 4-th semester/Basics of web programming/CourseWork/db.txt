@@ -1,0 +1,226 @@
+CREATE DATABASE `guitar_shop`;
+
+CREATE TABLE `users`(id INT AUTO_INCREMENT PRIMARY KEY,
+                    name VARCHAR(50) NOT NULL,
+                    email VARCHAR(255) NOT NULL UNIQUE,
+                    `password` VARCHAR(255) NOT NULL,
+		    activation VARCHAR(255) UNIQUE,
+		    `admin` enum('0','1') NOT NULL DEFAULT '0');
+
+CREATE TABLE `products`(product_id INT AUTO_INCREMENT PRIMARY KEY,
+                             title VARCHAR(255) NOT NULL,
+                             price INT,
+                             brand VARCHAR(255), 
+                             image VARCHAR(255) NOT NULL,
+                             description TEXT,
+                             features TEXT,
+                             `datetime` DATETIME,
+                             leader INT DEFAULT 0, 
+                             category_id VARCHAR(255),
+                             brand_id INT);
+
+ALTER TABLE `products` ADD  CONSTRAINT `product_brand_1` FOREIGN KEY (`brand_id`) REFERENCES `brand`(`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+
+CREATE TABLE `category`(id INT AUTO_INCREMENT PRIMARY KEY,
+               name VARCHAR(50));
+INSERT INTO `category`(`name`) VALUES ('Electroguitars');
+INSERT INTO `category`(`name`) VALUES ('Acoustic guitars');
+INSERT INTO `category`(`name`) VALUES ('Classic guitars');
+INSERT INTO `category`(`name`) VALUES ('Bass guitars');
+INSERT INTO `category`(`name`) VALUES ('Silent guitars');
+INSERT INTO `category`(`name`) VALUES ('Travel guitars');
+
+
+CREATE TABLE `brand`(id INT AUTO_INCREMENT PRIMARY KEY, name VARCHAR(50));
+INSERT INTO `brand`(`name`) VALUES ('Yamaha');
+INSERT INTO `brand`(`name`) VALUES ('Martin');
+INSERT INTO `brand`(`name`) VALUES ('Gibson');
+INSERT INTO `brand`(`name`) VALUES ('Fender');
+INSERT INTO `brand`(`name`) VALUES ('Ibanez');
+INSERT INTO `brand`(`name`) VALUES ('Breedlove');
+INSERT INTO `brand`(`name`) VALUES ('Takamine');
+
+
+CREATE TABLE `order`(id INT AUTO_INCREMENT PRIMARY KEY,
+                    user_id INT,
+                    `datetime` DATETIME,
+                    CONSTRAINT fk_user_id
+                    FOREIGN KEY (user_id)
+                    REFERENCES `users`(id)
+                    ON DELETE CASCADE
+                    ON UPDATE CASCADE);
+ALTER TABLE `order` ADD `products` VARCHAR(255);
+ALTER TABLE `order` ADD `user_name` VARCHAR(255);
+ALTER TABLE `order` ADD `user_phone` VARCHAR(255);
+
+CREATE TABLE `order`(id INT AUTO_INCREMENT PRIMARY KEY,
+                    user_id INT,
+                    `datetime` DATETIME,
+                    `products` VARCHAR(255),
+`user_name` VARCHAR(255),
+`user_phone` VARCHAR(255));
+
+CREATE TABLE `order_has product`(order_id INT,
+                                product_id INT,
+                                CONSTRAINT fk_order_id
+                                FOREIGN KEY (order_id)
+                                REFERENCES `order`(id)
+                                ON DELETE CASCADE
+                                ON UPDATE CASCADE,
+                                CONSTRAINT fk_product_id
+                                FOREIGN KEY (product_id)
+                                REFERENCES `products`(product_id)
+                                ON DELETE CASCADE
+                                ON UPDATE CASCADE);
+
+CREATE TABLE cart(cart_id INT AUTO_INCREMENT PRIMARY KEY,
+                 cart_id_products INT,
+                 cart_price INT,
+                 cart_count INT,
+                 cart_datetime DATETIME,
+                 cart_ip VARCHAR(100));
+
+CREATE TRIGGER datetime_before_insert BEFORE INSERT ON products FOR EACH ROW SET NEW.datetime = NOW();
+CREATE TRIGGER `datetime_orders_before_insert` BEFORE INSERT ON `order` FOR EACH ROW SET NEW.datetime = NOW();
+
+INSERT INTO `products`(`title`, `price`, `image`, `description`, `features`, `leader`, `category_id`, `brand_id`) VALUES ('Yamaha F335 Acoustic Guitar', 160, '..//app//resources//images//yamaha_f310p.jpg', "Yamaha's F335 gives you that classic dreadnought shape and sound at a price point that won't break your bank. The F335's tonewood combination includes a laminate spruce top, rosewood fingerboard and bridge, and meranti back and sides. Gold die-cast tuners provide smooth and accurate tuning while a tortoiseshell pickguard gives a bit more style. Case sold separately.", 'Body Style: Dreadnought acoustic
+Top: Laminated spruce
+Back: Meranti
+Sides: Meranti
+Fingerboard: Rosewood
+Bridge: Rosewood
+No. of frets: 20, 14 free
+Pickguard: tortoiseshell
+Finish: Gloss
+Tuners: Gold die-cast
+Warranty: Limited lifetime
+Case sold separately', 0, 1, 1);
+
+INSERT INTO `products`(`title`, `price`, `image`, `description`, `features`, `leader`, `category_id`, `brand_id`) VALUES ('Yamaha FG830 Dreadnought Acoustic Guitar', 300, '..//app//resources//images//cort_ad880_bk.jpg', "Yamaha's modern FG has louder and stronger sound in the low- to mid-ranges, thanks to cutting-edge acoustic analysis technology developed by the Yamaha R&D Division. Yamaha’s engineers have achieved this sound by utilizing analysis and simulation to arrive at the best bracing design without depending on tradition or guesswork. This analysis led to the development of the new scalloped bracing pattern, an ideal acoustic structure that maintains the durability of the top board while bringing out the most sound the Yamaha FG has to offer.", 'Body			
+	Body type:		Traditional Western
+	Cutaway:	Non-cutaway	
+	Top wood:	Solid	Spruce
+	Back & sides:	Rosewood
+	Bracing pattern:	Info not available
+	Body finish:	Gloss	Natural
+	Orientation:	Right handed	
+Neck			
+	Neck shape:	Info not available	
+	Nut width:	1.69" (43mm)	
+	Fingerboard:	Rosewood	
+	Neck wood:	Nato	
+	Scale length:	25.6"	
+	Number of frets:	21	
+	Neck finish:	Matte	
+Electronics			
+	Pickup/preamp:	No	
+	Brand:	Not applicable	
+	Configuration:	Not applicable
+	Preamp EQ:	Not applicable	
+	Feedback filter:	Not applicable	
+	Tuner:	Not applicable	
+Other			
+	Headstock overlay:	Rosewood	
+	Tuning machines:	Die-cast	
+	Bridge:	Rosewood	
+	Saddle & nut:	Urea	
+	Number of strings:	6-string	
+	Special features:	None	
+	Case:	Sold separately	
+	Accessories:	Hex Wrench	
+	Country of origin:	China', 0, 1, 1);
+
+INSERT INTO `products`(`title`, `price`, `image`, `description`, `features`, `leader`, `category_id`, `brand_id`) VALUES ('Yamaha FG830 Dreadnought Acoustic Guitar', 300, '..//app//resources//images//yamaha_fg800_folk.jpg', "Yamaha's FG800 Folk Acoustic Guitar is a reasonably priced entry-level acoustic guitar featuring one of the most popular tonewoods - solid Sitka spruce - for the top. This gives you a nice mellow tone with a slower response, and keeps the guitar nice and lightweight, a combination that is ideal for a beginner trying to find their way around the instrument. The nato back and sides also keeps the guitar lightweight and inexpensive while not sacrifcing tone. Other features of the FG800 include a rosewood fingerboard and bridge, black and white body binding, die-cast tuners, and a tortoise pickguard.", 'Body
+Body type: Dreadnaught
+Cutaway: Non-cutaway
+Top wood: Solid Spruce
+Back & sides: Nato/okume 
+Bracing pattern: Scalloped
+Body finish: Gloss
+Orientation: Right handed
+Neck
+Neck shape: Info not available
+Nut width: 1.69" (43mm)
+Fingerboard: Rosewood
+Neck wood: Nato
+Scale length: 25"
+Number of frets: 20 
+Neck finish: Matte
+Electronics
+Pickup/preamp: No
+Brand: Not applicable
+Configuration: Not applicable
+Preamp EQ: Not applicable
+Feedback filter: Not applicable
+Tuner: Not applicable
+Other
+Headstock overlay: Rosewood
+Tuning machines: Die-cast Chrome
+Bridge: Rosewood
+Saddle & nut: Urea
+Number of strings: 6-string
+Special features: None
+Case: Sold separately
+Accessories: Hex Wrench', 0, 1, 1);
+
+INSERT INTO `products`(`title`, `price`, `image`, `description`, `features`, `leader`, `category_id`, `brand_id`) VALUES ('Yamaha FS800 Folk Acoustic Guitar', 160, '..//app//resources//images//yamaha_f310p.jpg', "The FS800 Folk is Yamaha's standard acoustic model, with simple and traditional looks and outstanding quality, at an affordable price. A solid-top guitar with authentic sound that is well-balanced without sacrificing its robust strength, thanks to the newly developed scalloped bracing design. At this price, the FS800 Folk Acoustic is perfect for all beginner guitarists. Its small and thin body is perfect not only for female/young players but for intermediate to upper level fingerpicking style players as well.", 'Body
+Body type:	Concert/O
+Cutaway:	Non-cutaway
+Top wood:	Solid	Spruce
+Back & sides:	Nato/okume 
+Bracing pattern:	Scalloped
+Body finish:	Gloss
+Orientation:	Right handed
+Neck
+Neck shape:	Info not available
+Nut width:	1.69" (43mm)
+Fingerboard:	Rosewood
+Neck wood:	Nato
+Scale length:	25"
+Number of frets:	20
+Neck finish:	Matte
+Electronics
+Pickup/preamp:	No
+Brand:	Not applicable
+Configuration:	Not applicable
+Preamp EQ:	Not applicable
+Feedback filter:	Not applicable
+Tuner:	Not applicable
+Other
+Headstock overlay:	Rosewood
+Tuning machines:	Die-cast	Chrome
+Bridge:	Rosewood
+Saddle & nut:	Urea
+Number of strings:	6-string
+Special features:	None
+Case:	Sold separately
+Accessories:	Hex Wrench
+Country of origin:	China', 0, 1, 1);
+
+CREATE TABLE accessories_brand(id INT AUTO_INCREMENT PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL);
+INSERT INTO accessories_brand(`name`)VALUES('Guitar & Bass Accessories');
+INSERT INTO accessories_brand(`name`)VALUES('Stands & Racks');
+INSERT INTO accessories_brand(`name`)VALUES('Cases, Gig Bags & Covers');
+INSERT INTO accessories_brand(`name`)VALUES('Keyboard Accessories');
+INSERT INTO accessories_brand(`name`)VALUES('Cables and Snakes');
+
+
+
+CREATE TABLE accessories(id INT AUTO_INCREMENT PRIMARY KEY,
+                        name VARCHAR(255) NOT NULL,
+                        category_id INT,
+                        CONSTRAINT `category_fk_access` FOREIGN KEY(id) REFERENCES accessories_categories(id));
+ALTER TABLE `accessories` ADD `datetime` DATETIME;
+ALTER TABLE `accessories` ADD `price` INT;
+ALTER TABLE `accessories` ADD `image` VARCHAR(255);
+ALTER TABLE `accessories` ADD `description` VARCHAR(255);
+
+CREATE TRIGGER datetime_before_insert_access BEFORE INSERT ON accessories FOR EACH ROW SET NEW.datetime = NOW();
+
+SELECT
+                             p.id, p.title,p.price, p.image, p.description, b.name AS brand
+                             FROM products p
+                             INNER JOIN brand b ON p.brand_id = b.id
+                             WHERE p.leader = 1

@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body{
+    font-family: "Roboto", sans-serif;
+    background: azure;
+}
+
+#content{
+    background: white;
+    padding: 10px;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+#main{
+    background: white;
+    padding: 10px;
+    width: 800px;
+    margin: auto;
+    text-align: center;
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+#content #reg-form{
+    width: 600px;
+    margin: 0 auto;
+    text-align: right;
+}
+
+#content #reg-form h1{
+    text-align: center;
+}
+
+#content #reg-form .field {
+   float: left;
+    border: 2px solid #fe6637;
+}
+
+#content #reg-form label {
+     float: left;
+     text-align: left;
+     width: 200px;
+}
+
+#content #reg-form button, #main a{
+    text-decoration: none;
+    outline: none;
+    background: white;
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 10px 20px;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid #fe6637;
+    border-radius: 8px;
+    font-family: 'Montserrat', sans-serif;
+    color: #fe6637;
+    transition: .2s ease-in-out;
+}
+
+#content #reg-form button, #main a:hover {
+    background: #fe6637;
+    color: #fff;
+}
+
+#main #info{
+    width: 40%;
+    height: auto;
+    border: 2px solid #fe6637;
+    border-radius: 8px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#main #info #text{
+    margin: 0 auto;
+    width: 80%;
+    text-align: left;
+}

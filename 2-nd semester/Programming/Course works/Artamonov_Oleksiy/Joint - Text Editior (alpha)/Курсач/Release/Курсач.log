@@ -1,0 +1,6 @@
+﻿cl : командная строка warning D9035: использование параметра "clr:pure" нежелательно, он будет удален в следующих выпусках
+  Joint - -Text Editior.cpp
+  MyForm1.cpp
+  Создание кода...
+  Курсач.vcxproj -> E:\Joint - Text Editior 1.0\Release\Joint - Text Editior.exe
+  Курсач.vcxproj -> E:\Joint - Text Editior 1.0\Release\Joint - Text Editior.pdb (Full PDB)

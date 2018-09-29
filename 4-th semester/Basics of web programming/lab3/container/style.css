@@ -1,0 +1,1333 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Raleway:400,700');
+html, body{
+	padding:0;
+	margin:0; 
+}
+a{
+	display:inline-block;
+	text-decoration: none;
+	color: white;
+	
+}
+.search input {
+  border: none;
+	
+}
+.search .input {
+  width: 100%;
+  padding: 8px 37px 9px 15px;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+  background: #EEE;
+  font: 13px Tahoma, Arial, sans-serif;
+  color: #555;
+  outline: none;
+}
+.search .input:focus {
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+  background: #E8E8E8;
+  color: #333;
+}
+.search .submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 37px;
+  height: 100%;
+	height: 33px;
+  cursor: pointer;
+  background: url(https://lh4.googleusercontent.com/-b-5aBxcxarY/UAfFW9lVyjI/AAAAAAAABUg/gQtEXuPuIds/s13/go.png) 50% no-repeat;
+  opacity: 0.5;
+}
+.search .submit:hover {
+  opacity: 0.8;
+}
+input[type="search"] {
+  -webkit-appearance: none;
+}
+*{
+	font-family: 'Open Sans', 'Raleway', sans-serif;
+}
+header{
+	background-color: #3d1f0f;
+	display: block;
+	height:175px;
+	width:100%;
+	padding:0px;
+    margin: -1px;	
+}
+#header{
+		padding:0px;
+    margin: 0px;
+	background-color: #3d1f0f;
+	width: 100%;
+	height: 100%;
+
+}
+#header > #logo > #name {
+	top:50px;
+	height: 30px;
+	position: absolute;
+	font-family:  'Julius Sans One', sans-serif, 'Raleway';
+	line-height: 30px;
+	left: 130px;
+	font-size: 34px;
+
+}
+#header > #logo > #name1 {
+	top:80px;
+	height: 30px;
+	position: absolute;
+	font-family:  'Julius Sans One', sans-serif, 'Raleway';
+	line-height: 30px;
+	left: 150px;
+}
+#header > #logo  {
+	display: block;
+	height: 140px;
+	width: 440px;
+	position: absolute;
+	right:58%;
+
+}
+#header > #logo > #logotip{
+	position: absolute;
+	width: 110px;
+	height: 120px;
+	padding: 0px;
+	top:12px;
+}
+#menu{
+	left: 0px;
+	width: 100%;
+position: absolute;
+	top:135px;
+margin-top: 0px;
+background: #3d1f0f;
+	height:40px;
+	text-align: center;	
+	width: 100%;
+	left: 0px;
+	display: inline-block;
+}
+#menu > ul {
+	left: 0px;
+	position: absolute;
+	padding:0px;
+	margin: 0;
+	font-size: 0;
+	text-align: center;
+	display: inline-block;
+	width: 1200px;
+	width: 100%;
+	vertical-align: middle;
+}
+#menu > ul > li{
+	display: inline-block;
+	list-style: none;
+	font-size: 13px;
+	
+}
+#menu > ul > li > a{
+	color: #fff;
+	text-decoration: none;
+	height: 39px;
+	line-height: 39px;
+	padding:0px 28px; 
+}
+#menu > ul > li > a:hover{
+	background-color: #6c4b3a;
+}
+#header > #mini >#palki{
+	display: none;
+}
+#contacts > ul > li > a > #phone-icon {
+padding-right: 10px;
+	padding-top: 2px;	
+	padding-left: 0px;
+	
+}
+#contacts > ul > li > a > #phone-icon2 {
+padding-right: 10px;
+	padding-top: 2px;	
+	padding-left: 0px;	
+	
+}
+#contacts > ul > li > a > #mail-icon {
+padding-right: 8px;
+	padding-top: 2px;	
+	padding-left: 2px;
+	
+}
+#contacts > ul > li > a > #adres-icon {
+padding-right: 8px;
+	padding-top: 2px;	
+	padding-left: 2px;
+	
+}
+#header > #contacts{
+	position: absolute;
+	padding: 10px;
+	padding-top:0px;
+	width: 190px;
+	padding-bottom:0px;
+	top: 20px;
+	right: 46.6%;
+	width: 11%;
+	text-align: left;	
+	
+}
+#header >#contacts > ul {
+display: block;
+	width: 190px;
+	padding:0;
+	margin: 0px;
+	font-size: 0;
+	
+	
+}
+#header >#contacts > ul > li{
+	width: 190px;
+	list-style: none;
+	font-size: 12px;
+	width: 100%;
+
+}
+#header >#contacts > ul > li > a{
+	color: #fff;
+	text-decoration: none;
+	height: 26px;
+	line-height: 26px;
+	width: 100%;
+	width: 200px;
+	padding:0px 20px 0px 0px; 
+   
+}
+#header >#contacts > ul > li > a:hover{
+	
+	background-color: #6c4b3a;
+}
+#header > #poisk{
+	position: absolute;
+	top:20px;
+	height: 105px;
+	max-width: 300px;
+	right:30%;
+	width: 17.0%;
+}
+#header >#poisk > #search {
+	max-width: 300px;
+	height: 34px;
+	top:20px;
+	width: 100%;
+	left:900px;
+	
+}
+#header > #poisk > #cons{
+margin-top: 10px;
+	max-width: 300px;
+	height: 60px;
+	width: 100%;
+	left: 900px;
+	line-height: 60px;
+	text-align: center;
+	
+}
+#header > #poisk > #cons > a{
+max-width: 300px;
+	width: 100%;
+}
+#consultation{
+	margin-top: -15px;
+	margin-left: -25px;
+width: 80px;
+}
+#header > #poisk > #cons > a:hover{
+
+	background-color:  #6c4b3a;
+}
+#header > #buy{
+	max-width: 200px;
+    	max-height:105px;
+	line-height: 105px;
+	position: absolute;
+	top:20px;
+	
+	right:19%;
+	
+	width: 12%;
+	text-align: center;
+}
+#buy-icon{
+	padding-bottom: 10px;
+	max-width: 40px;
+	width: 20%;
+    	
+}
+#header > #buy > a{
+	width: 100%;
+	height: 100%;
+	
+}
+#header > #buy > a:hover{
+	background-color:#6c4b3a;
+}
+#header > hr{
+	
+	margin-top: 0px;
+	padding-top:134px;
+}
+#footer{
+	position: absolute;
+	top:1421px;
+	width: 100%;
+margin-top: 0px;
+background: #3d200f;
+	height:250px;
+	text-align: center;	
+	background-image: url(images/footer.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size:2000px;
+	z-index: 0;
+}
+#footer >#contacti > ul > li > a > #icon1 {
+padding-right: px;
+	margin-top: -2px;
+	padding-top: px;	
+	padding-left: 0px;
+	margin-left:-30px;
+	position: absolute;
+}
+#footer >#contacti > ul > li > a > #phone-icon3 {
+padding-right: px;
+	margin-top: -2px;
+	padding-top: px;	
+	padding-left: 0px;	
+	margin-left:-30px;
+	position: absolute;
+}
+#footer >#contacti > ul > li > a > #mail-icon1 {
+padding-right:px;
+	margin-top: -0px;
+	position: absolute;
+	padding-top: px;	
+	padding-left: px;
+margin-left:-27px;
+}
+#footer >#contacti > ul > li > a > #adres-icon1 {
+padding-right: px;
+	position: absolute;
+	padding-top: px;	
+	padding-left: px;
+	margin-left:-27px;
+	
+}
+#footer >#contacti{
+	position: absolute;
+	padding: 20px;
+	padding-top:0px;
+	padding-right:0px;
+	width: 150px;
+	padding-bottom:0px;
+	top: 50px;
+	left: 350px;
+	text-align: left;	
+	
+}
+#footer >#contacti > ul{
+display: block;
+	width: 150px;
+	padding:0;
+	margin: 0px;
+	font-size: 0;
+}
+#footer >#contacti > ul > li{
+	width: 150px;
+	list-style: none;
+	font-size: 12px;
+	height: 30px;
+	margin-bottom: 10px;
+	
+}
+#footer >#contacti > ul > li > a{
+	color: #fff;
+	text-decoration: none;
+	height: 30px;
+	line-height: 25px;
+	width: 100%;
+	width: 170px;
+	padding:0px 10px; 
+   
+}
+#footer >#contacti > ul > li > a:hover{
+	text-decoration: underline;
+}
+#footer > #compania > #company {
+	height: 200px;
+	text-align: center;
+	left: 620px;
+	top: 49px;
+	position: absolute;
+	width: px;
+	padding:2px;
+	margin: 0px;
+	font-size: 0;
+	
+}
+#footer > #compania > #company > li{
+	padding-top: 10px;
+	height: 25px;
+	text-align: center;
+	width: 190px;
+	list-style: none;
+	font-size: 13px;
+	
+}
+#footer > #compania > #company > li > a{
+	text-align: center;
+	width: 190px;
+	height: 36px;
+	list-style: none;
+	font-size: 13px;
+	
+}
+#footer > #compania > h1{
+	top:px;
+	position: absolute;
+	left: 655px;
+	color: white;
+	font-size: 25px;
+}
+#footer > #compania > #company > li > a:hover{
+	text-decoration: underline;
+}
+#footer > #pokypateli > #buyers {
+	height: 170px;
+	text-align: center;
+	left: 875px;
+	top: 48px;
+	position: absolute;
+	width: px;
+	padding:2px;
+	margin: 0px;
+	font-size: 0;
+	
+}
+#footer >  #pokypateli > #buyers > li{
+	padding-top: 10px;
+	height: 25px;
+	text-align: center;
+	width: 190px;
+	list-style: none;
+	font-size: 13px;
+	
+}
+#footer >  #pokypateli > #buyers > li > a{
+	text-align: center;
+	width: 190px;
+	height: 40px;
+	list-style: none;
+	font-size: 13px;
+	
+}
+#footer > #pokypateli  > h1{
+	top:0px;
+	position: absolute;
+	left: 890px;
+	color: white;
+	font-size: 25px;
+}
+#footer > #pokypateli > #buyers > li > a:hover{
+	text-decoration: underline;
+}
+#footer > #drygoe > #others {
+	height: 120px;
+	text-align: center;
+	left: 1120px;
+	top: 34px;
+	position: absolute;
+	width: px;
+	padding:2px;
+	margin: 0px;
+	font-size: 0;
+	
+}
+#footer > #drygoe > #others> li{
+	padding-top: 10px;
+	height: 30px;
+	text-align: center;
+	width: 190px;
+	list-style: none;
+	font-size: 13px;
+	
+}
+#footer > #drygoe > #others > li > a{
+	padding-top: 10px;
+	height: 30px;
+	text-align: center;
+	width: 190px;
+	list-style: none;
+	font-size: 13px;
+	
+}
+#footer >#drygoe   > h1{
+	top:0px;
+	position: absolute;
+	left: 1175px;
+	color: white;
+	font-size: 25px;
+}
+#footer > #drygoe > #others > li > a:hover{
+	text-decoration: underline;
+}
+#footer >#seti   > h1{
+	top:0px;
+	position: absolute;
+	left: 1380px;
+	color: white;
+	font-size: 25px;
+}
+
+#footer > #seti > #social{
+	left: 1350px;
+	padding: 0px;
+	top:40px;
+		position: absolute;
+	width: 100%;
+	height:auto;
+    color: white;
+	text-align: center;
+	display: inline-block;
+	width: 200px;
+}
+#seti > #social > li{
+	float: left;
+	display: inline-block;
+	list-style: none;
+	
+
+}
+#seti >#social> li > a{
+	float: left;
+	margin-left: 10px;
+	margin-bottom: 10px;
+ 	line-height: 50px;
+	text-decoration: none;
+	height: 50px;
+	line-height: 50px;
+ 	width: 50px;
+	text-align: center;
+}
+#footer >#seti >#social> li > #twit{
+  background-image: url('images/seti/twitt.png');
+background-position: 50% 50%;
+background-repeat: no-repeat;
+-webkit-background-size: 70%;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+#footer >#seti >#social> li > #vk{
+  background-image: url('images/seti/vk.png');
+background-position: 50% 50%;
+background-repeat: no-repeat;
+-webkit-background-size: 70%;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+
+#footer >#seti >#social> li > #pin{
+  background-image: url('images/seti/Pin.png');
+background-position: 50% 50%;
+background-repeat: no-repeat;
+-webkit-background-size: 70%;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+#footer >#seti >#social> li > #fb{
+  background-image: url('images/seti/fb.png');
+background-position: 50% 50%;
+background-repeat: no-repeat;
+-webkit-background-size: 70% ;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+#footer >#seti >#social> li > #gp{
+  background-image: url('images/seti/g+.png');
+background-position: 50% 50%;
+background-repeat: no-repeat;
+-webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+}
+
+
+#seti > ul > li > a:hover{
+    
+background-color: #6c4b39; 
+transition: opacity 1.5s ;
+}
+#kont {
+	max-width:1200px; 
+	height:900px;
+	margin:20px auto;
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	top:180px;
+	padding: 0px;
+	left:315px;
+	flex-direction: row;
+	list-style: none;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+#kont > li{
+	padding:0px;
+	height: 300px;
+  width: 600px;
+	text-align: center;
+	line-height: 300px;
+	display: inline-block;
+	font-family:  'Julius Sans One', 'Raleway', sans-serif;
+	font-size: 30px;
+	background-color: black;
+	opacity: 1;
+}
+#kont > li > #adin{
+	
+	background-image: url(images/myjik.png);
+}
+#kont > li > #dva{
+	
+	background-image: url(images/devka.png);
+}
+#kont > li > #tri{
+	background-image: url(images/detya.jpg);
+		
+}
+#kont > li > #chetiri{
+	
+	background-image: url(images/int.png);
+}
+#kont > li > #pyat{
+	
+	background-image: url(images/accsess.png);
+}
+#kont > li > #shist{
+	
+	background-image: url(images/akcia.png);
+}
+#kont > li > a{
+width: 100%;
+	height:100%;
+	opacity: 0.5;
+	transition: opacity 1.5s;
+}
+#kont > li > a:hover{
+	opacity: 1;
+	transition: opacity 1.5s;
+}
+
+.content > #tekst{
+	top: 1150px;
+ 	display:flex;
+	max-width: 1200px;
+	width:100%;
+	text-align: center;
+	color:  #3d1f0f;
+	padding:0px;
+	margin:0 auto;
+	font-size:19px;
+	flex-direction: column;
+	
+}
+@media (max-width:1875px){
+	/**.content > #tekst{
+		left: 15.5%;
+	}
+#kont{
+		left: 15%;
+		width:65%;
+	}
+	#kont > li{
+		width:50%;
+	}**/
+	#header > #buy{
+		right:17%;
+	}
+	#header > #contacts > ul >li> a{
+
+		width:85%;
+	}
+	#header > #contacts{
+		left: 40.5%;
+	}
+	#footer >#contacti{
+	position: absolute;
+		left:17%;
+	}
+	#footer > #compania > #company {
+		position: absolute;
+		left:33%;
+	}
+	#footer > #compania > h1{
+		left:35%;
+	}
+	#footer > #pokypateli > #buyers{
+		left:47%;
+	}
+	#footer > #pokypateli > h1{
+		left:48%;
+	}
+	#footer > #drygoe > #others{
+		left:59.5%;
+	}
+	#footer > #drygoe > h1{
+		left:62.5%;
+	}	
+	#footer > #seti > #social{
+	left: 72%;
+	}
+	#footer > #seti > h1{
+		left: 74%;
+	}
+	}
+}
+
+@media(max-width:1690px){
+	/**.content > #tekst{
+		right: 14%;
+	}**/
+	#header > #poisk{
+		width: 30%;
+		
+	}
+	#header > #buy{
+		
+		right: 15%;
+		
+	}
+	
+}
+@media (max-width:1570px){
+	/**.content > #tekst{
+		top:1100px;
+		right: 11.5%;
+	}**/
+	
+	#header > #logo {
+		
+	}
+	#header > #buy{
+right: 11.5%;
+		width: 12%;
+}
+	#header > #poisk{
+left: 56%;
+width: 20%;
+	}
+	#header > #contacts{
+		left:41.5%;
+		width:10%;
+	}	
+	#header > #contacts>ul>li>a{
+        
+		width: 85%;
+		
+	}
+}
+@media(max-width:1525px){
+	/**.content > #tekst{
+	left:11.5%;
+		top:1100px;
+	}
+	#kont{
+		left: 9%;
+		width:80%;
+	}
+	#kont > li{
+		width:50%;
+	}**/
+	#footer >#contacti{
+	position: absolute;
+		left:12%;
+	}
+	#footer > #compania > #company {
+		position: absolute;
+		left:30%;
+	}
+	#footer > #compania > h1{
+		left:32.5%;
+	}
+	#footer > #pokypateli > #buyers{
+		left:47%;
+	}
+	#footer > #pokypateli > h1{
+		left:48%;
+	}
+	#footer > #drygoe > #others{
+		left:62%;
+	}
+	#footer > #drygoe > h1{
+		left:65.5%;
+	}	
+	#footer > #seti > #social{
+	left: 79%;
+	}
+	#footer > #seti > h1{
+		left: 81%;
+	}
+	}
+
+@media(max-width:1425px){
+	/**.content > #tekst{
+		left: 8%;	
+	}
+	#kont{
+		left:8%;
+		
+	}**/
+	#header > #poisk{
+		width: 50%;
+		
+	}
+	#header > #buy{
+		
+		right: 9%;
+		
+	}
+}
+@media(max-width:1340px){
+	/**.content > #tekst{
+		left:10.5%;	
+		width: 80%;
+	}**/
+	#header > #buy{
+		left:85%;
+		
+	}
+	#header > #poisk{
+		
+		left: 59%;
+		
+	}	
+}
+@media(max-width: 1214px){
+	/**.content > #tekst{
+		left: 0%;
+		top:1050px;
+		width: 100%
+	}**/
+	#kont{
+		width:100%;
+		margin:0px;
+	}
+	#kont> li{padding: 0px;
+	width:50%;}
+	#header > hr{
+		display: none;
+	}
+	#header>#buy{
+		display: none;	
+	}
+	 header{
+		 top:0px;
+		height: 100px;
+	}
+	#header > #logo {
+		height: 100px;
+		left:0px;
+	}
+	#header > #logo > #logotip{
+		width: 17%;
+	 left:20px;
+		top:10px;
+		height: 80%;
+	}
+	#header > #logo > #name{
+	top:25px;
+		left:110px;
+	}
+	#header > #logo > #name1{
+	top:50px;
+		left:130px;
+	}
+	#header > #contacts{
+	position: absolute;
+	width: 380px;
+	top: 20px;
+		height: 60px;
+	text-align: left;
+	left: 44%;
+	
+}
+	#header > #contacts > ul {
+display: inline-block;
+	width: 490px;
+	padding:0;
+	height: 60px;
+	margin: 0px;
+	font-size: 0;
+	
+	
+}
+	#header > #contacts > ul > li{
+	width: 120px;
+	display: inline-block;
+	list-style: none;
+	font-size: 12px;
+	width:40%;
+
+}
+	#header > #contacts > ul > li > a{
+	color: #fff;
+	text-decoration: none;
+	height: 26px;
+	line-height: 26px;
+	width: 80%;
+	width: 170px;
+	padding:0px 20px 0px 0px; 
+   margin-bottom: 5px;
+}
+	#header > #menu{
+		display: none;
+		
+	}
+	#header > #poisk{
+		display: none;
+	}
+	#header > #mini > #palki> #menyu{
+		width: 60%;
+margin-left: 18px;
+		margin-top: 13px;
+		left: 10px;
+	}
+	#header > #mini >#palki{
+	display: block;
+		height: 70px;
+		position: absolute;
+		right: 20px;
+		top: 15px;
+		width:90px;
+}
+	#header > #mini > a{
+		z-index: 99;
+		
+	}
+	#header > #mini > a:hover{
+	background-color: #6c4b39;	
+		
+	}
+	#footer{top:1400px;}
+	#footer > #drygoe > h1{
+		left:75.5%;
+	}
+	#footer >#contacti{
+	position: absolute;
+		left:4%;
+	}
+	#footer > #compania > #company {
+		position: absolute;
+		left:23.5%;
+	}
+	#footer > #compania > h1{
+		left: 26.5%;
+	}
+	#footer > #pokypateli > #buyers{
+		left: 44.5%;
+	}
+	#footer > #pokypateli > h1{
+		left:46%;
+	}
+	#footer > #drygoe > #others{
+		left:63.5%;
+	}
+	#footer > #drygoe > h1{
+		left:68%;
+	}	
+	#footer > #seti > #social{
+	left:81%;
+	}
+	#footer > #seti > h1{
+		left: 84%;
+	}
+	}
+@media(max-width:922px){
+	.content > #tekst{
+		left: 0%;
+		top:1040px;
+	}
+	#kont{
+		margin-top:100px;
+		width: 100%;
+	}
+	#kont > li{
+		width:50%;
+	}
+	#header > #contacts{
+		display: none;
+	}
+	#header > #logo{
+		left:1%;
+	}
+	header{
+		position: fixed;
+		z-index: 100;
+	}
+	#footer > #compania > #company {
+		display: none;
+	}
+	#footer > #compania > h1{
+		left: 15%;
+		top: 190px;
+	}
+	#footer > #pokypateli > #buyers{
+	display: none;
+	}
+	#footer > #pokypateli > h1{
+		left:43%;
+		top: 190px;
+	}
+	#footer > #drygoe > #others{
+		display: none;
+	}
+	#footer > #drygoe > h1{
+		left:75%;
+		top: 190px;
+	}	
+	#footer > #seti > #social{
+	left:60%;
+		top:24px;
+		width:29%;
+		height:60%;
+	}
+	#footer > #seti > #social > li {
+padding-right: 20px;
+		width:24%;
+		height:50%;
+	}
+	
+	#footer > #seti > h1{
+		top:-10px;
+		left: 68%;
+	}
+	#footer >#contacti{
+	left:20%;
+	top:20px;
+		width: 25%;
+		
+	}
+	#footer >#contacti > ul >li > a {
+		height: 40px;
+		line-height: 40px;
+	top:30px;
+		width: 120%;
+		font-size: 13px;
+		
+	}
+	
+	#footer >#contacti > ul > li > a > #icon1 {
+
+	margin-left:-52px;
+	
+}
+#footer >#contacti > ul > li > a > #phone-icon3 {
+	margin-left:-52px;	
+}
+#footer >#contacti > ul > li > a > #mail-icon1 {
+margin-left:-48px;
+}
+#footer >#contacti > ul > li > a > #adres-icon1 {
+	margin-left:-48px;
+}
+	#footer >#seti >#social> li > #twit{
+width: 50px;
+	  height:50px;
+}
+#footer >#seti >#social> li > #vk{
+width: 50px;
+	  height:50px;
+}
+
+#footer >#seti >#social> li > #pin{
+  	  width: 50px;
+	  height:50px;
+}
+#footer >#seti >#social> li > #fb{
+width: 50px;
+	  height:50px;
+}
+#footer >#seti >#social> li > #gp{
+width: 50px;
+	  height:50px;
+}
+}
+@media(max-width:760px){
+	#footer{top:1380px;}
+	.content > #tekst{
+		left: 0%;
+		top:1900px;
+	}
+	#kont{
+		
+		width: 100%;
+	}
+	#kont > li{
+		width:50%;
+		background-image: ;
+	}
+		#footer >#seti >#social> li > #twit{
+  width: 50px;
+	  height:50px;
+}
+#footer >#seti >#social> li > #vk{
+   width: 50px;
+	  height:50px;
+	}
+
+#footer >#seti >#social> li > #pin{
+  width: 50px;
+	  height:50px;
+}
+#footer >#seti >#social> li > #fb{
+  width: 50px;
+	  height:50px;
+}
+#footer >#seti >#social> li > #gp{
+  width: 50px;
+	  height:50px;
+}
+		#footer > #seti > #social > li {
+padding:0px;
+ 		width:24%;
+		height:50%;
+}
+}
+	@media(max-width: 680px){
+		.content > #tekst{
+		left: 0%;
+			top:1880px;
+	}
+				#footer > #seti > #social > li {
+padding:0px;
+ 		width:44%;
+		height:34%;
+}
+		#footer > #seti >h1 {
+		left: 62%;
+			
+		}
+		#footer > #compania > h1{
+		font-size: 21px;
+			left: 10%;
+		top: 190px;
+	}
+	#footer > #pokypateli > h1{
+		left:39%;
+		top: 190px;
+		font-size: 21px;
+	}
+	
+		#footer > #drygoe > h1
+		{
+			font-size: 21px;
+		}
+	}
+@media(max-width:630px){
+	.content > #tekst{
+		left: 0%;
+		font-size: 110%;
+		top:1900px;
+	}
+		#footer >#contacti {left:70px;}
+		#footer >#contacti > ul > li > a > #icon1 {
+width: 40px;
+	margin-left:-52px;
+	
+}
+#footer >#contacti > ul > li > a > #phone-icon3 {
+	width: 40px;	
+	margin-left:-52px;	
+}
+#footer >#contacti > ul > li > a > #mail-icon1 {
+margin-left:-48px;
+	width: 35px;
+}
+#footer >#contacti > ul > li > a > #adres-icon1 {
+width: 35px;
+	margin-left:-48px;
+}
+}
+
+@media(max-width:535px){
+	.content > #tekst{
+		left: 0%;
+		font-size: 100%;
+		top:1900px;
+	}
+	/**	#kont{
+		left:-32px;
+		width: 100%;
+	}
+	#kont > li{
+		width:100%;
+		background-image: ;
+	}**/
+	#header > #logo {
+		width: 70%
+		
+	}
+	#header > #logo > #name1{
+		left:26%;
+		width: 250px;
+		
+	}
+	#header > #logo > #name{
+		font-size: 150%;
+		left: 34%
+		
+	}
+	#header > #logo > #logotip{
+		width: 21%;
+		
+		
+	}
+	#footer >#contacti {left:70px;}
+		#footer >#contacti > ul > li > a > #icon1 {
+width: 40px;
+	margin-left:-52px;
+	
+}
+#footer >#contacti > ul > li > a > #phone-icon3 {
+	width: 40px;	
+	margin-left:-52px;	
+}
+#footer >#contacti > ul > li > a > #mail-icon1 {
+margin-left:-48px;
+	width: 35px;
+}
+#footer >#contacti > ul > li > a > #adres-icon1 {
+width: 35px;
+	margin-left:-48px;
+}
+}
+@media(max-width:470px){
+	.content > #tekst{
+		left: 0%;
+		font-size: 95%;
+		top:1900px;
+	}
+	#header > #logo{
+		width:70%;
+	}
+	#header > #logo > #name{
+		position: absolute;
+		left:10px;
+width: 90%;
+		top:35px;
+		
+	}
+	#header > #logo > #name1{
+		display:none;
+	}
+	#header > #logo > #logotip {
+		display: none;
+	}
+			#footer > #seti > #social > li {
+padding:0px;
+ 		width:44%;
+		height:34%;
+}
+		#footer > #seti >h1 {
+		left: 60%;
+		}
+		#footer >#contacti{
+	left:10%;
+	top:20px;
+		width: 36%;
+		
+	}
+	#footer >#contacti > ul >li > a {
+		height: 40px;
+		line-height: 40px;
+	top:30px;
+		width: 120%;
+		font-size: 14px;
+		
+	}
+	
+	#footer >#contacti > ul > li > a > #icon1 {
+width: 40px;
+	margin-left:-52px;
+	
+}
+#footer >#contacti > ul > li > a > #phone-icon3 {
+	width: 40px;	
+	margin-left:-52px;	
+}
+#footer >#contacti > ul > li > a > #mail-icon1 {
+margin-left:-48px;
+	width: 35px;
+}
+#footer >#contacti > ul > li > a > #adres-icon1 {
+width: 35px;
+	margin-left:-48px;
+}
+}
+@media(max-width:600px){
+	#kont > li{
+		width: 100%;
+	}
+	.content>#tekst{
+		margin-top:890px;
+	}
+	#footer{top:2300px;}
+}
+@media(max-width:375px){
+	
+#footer > #compania > h1{
+		font-size: 20px;
+			left: 5%;
+		top: 190px;
+	}
+	#footer > #pokypateli > h1{
+		left:36%;
+		top: 190px;
+		font-size: 20px;
+	}
+	
+		#footer > #drygoe > h1
+		{
+			font-size: 20px;
+		}
+	#footer{top:2400px;}
+}
+
+@media(max-width:361px){
+	.content > #tekst{
+	margin-top: 910px;
+	}
+	#footer > #compania > h1{
+		font-size: 18px;
+			left: 5%;
+		top: 190px;
+	}
+	#footer > #pokypateli > h1{
+		left:36%;
+		top: 190px;
+		font-size: 18px;
+	}
+	
+		#footer > #drygoe > h1
+		{
+			font-size: 18px;
+		}
+	#footer >#seti >h1{display: none;}
+	#footer >#seti >#social {top:0px;left: 67%;}
+		#footer >#contacti  {top:20px;left: 30px;}
+	#footer >#seti >#social > li > a {margin-right:45%;
+	width: 20px;
+	height: 20px;}
+}

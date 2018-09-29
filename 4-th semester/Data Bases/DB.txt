@@ -1,0 +1,155 @@
+﻿CREATE DATABASE publishing_house
+CREATE TABLE author(author_id INT AUTO_INCREMENT PRIMARY KEY,
+		    surname VARCHAR(30) NOT NULL,
+ 		    name VARCHAR(30) NOT NULL,
+ 		    patronymic VARCHAR(30) NOT NULL,
+		    address VARCHAR(30),
+		    phone VARCHAR(30),
+		    note TEXT(50));
+INSERT INTO `author`(`surname`,
+		     `name`, 
+		     `patronymic`,
+		     `address`,
+		     `phone`,
+		     `note`) VALUES ('Belanov',
+				     'Ivan', 
+				     'Viktorovich', 
+				     'st.Lisova 3',
+				     '0988423041',
+				     'human');
+DELETE FROM author WHERE name = 'Ivan';
+INSERT INTO `author`(`surname`,
+		     `name`,
+		     `patronymic`, 
+   		     `address`,
+		     `phone`,
+		     `note`) VALUES ('Artamonov',
+				     'Lesha',
+				     'Yurievich',
+				     'st.Goloseevskaya 3',
+				     '0987654321',
+				     'man');
+UPDATE `author` SET `name`= 'Aleksey', `phone`= '0938527453' WHERE surname = 'Artamonov';
+SELECT `surname`, `name`, `patronymic` FROM `author`;
+
+CREATE TABLE technological_card(edition_id INT,
+                              	FOREIGN KEY (edition_id) REFERENCES edition(edition_id),
+			  	amount INT,
+                                level_of_complexity INT,
+                                performers INT,
+                                FOREIGN KEY(performers) REFERENCES performer(performer_id),
+			   	begin_date DATE,
+			   	end_date DATE,
+			   	technological_card_id INT AUTO_INCREMENT PRIMARY KEY,
+			   	cost_of_printing INT,
+			   	account_id INT,
+                                FOREIGN KEY(account_id) REFERENCES account(account_id));
+INSERT INTO `technological_card`(`author_id`, 
+				 `edition_id`,
+				 `amount`,	
+				 `level_of_complexity`,
+				 `performers`,
+				 `begin_date`,
+				 `end_date`,
+				 `cost_of_printing`,
+				 `account_id`) VALUES (2,
+						       1,
+						       300,
+						       2, 
+						       1,
+						       DATE('2013-07-06'),
+						       DATE('2012-53-14'),
+						       1488,
+						       3);
+——————————————————————————————————————————————————————————————————————————————————————————
+ALTER TABLE technological_card ADD edition_id INT;
+ALTER TABLE technological_card ADD FOREIGN KEY (edition_id) REFERENCES edition(edition_id);
+ALTER TABLE technological_card ADD account_id INT;
+ALTER TABLE technological_card ADD FOREIGN KEY (account_id) REFERENCES edition(account_id);
+
+——————————————————————————————————————————————————————————————————————————————————————————
+
+CREATE TABLE edition(edition_id INT AUTO_INCREMENT PRIMARY KEY,
+		     full_name VARCHAR(30),
+		     short_name VARCHAR(10),
+		     type_of_publications VARCHAR(30) CHEK(type_of_publications IN ('Book','Reader','Poster')),
+		     count_of_pages INT,
+		     circulation INT,
+ 		     format VARCHAR(7),
+		     kind_of_printing VARCHAR(30),
+		     kind_of_work_id INT,
+             	     FOREIGN KEY (kind_of_work_id) REFERENCES kind_of_work(kind_of_work_id));
+INSERT INTO `edition`(`full_name`,
+		      `short_name`, 
+		      `type_of_publications`,
+		      `count_of_pages`,
+		      `circulation`, 
+		      `format`, 
+		      `kind_of_printing`, 
+		      `kind_of_work_id`) VALUES ('OOO LychshiyOpenLoh',
+						 'OOO LOL',
+						 'poster',
+						 20,
+						 22,
+						 '22x23',	
+						 'prik',
+						 1);
+
+CREATE TABLE authors_editions(author_id INT,
+			      edition_id INT,
+			      FOREIGN KEY (author_id) REFERENCES author(author_id),
+			      FOREIGN KEY (edition_id) REFERENCES editions(edition_id),
+			      PRIMARY KEY (author_id, edition_id));
+
+CREATE TABLE subdivisions(id INT AUTOINCREMENT PRIMARY KEY,
+			  name VARCHAR(30));
+
+CREATE TABLE performer(performer_id INT AUTO_INCREMENT PRIMARY KEY,
+		       surname VARCHAR(30) NOT NULL,
+ 		       name VARCHAR(30) NOT NULL,
+ 		       patronymic VARCHAR(30) NOT NULL,
+		       passport VARCHAR(7),
+		       address VARCHAR(30),
+		       phone VARCHAR(10),
+		       birth_date DATE,
+		       employement_date DATE,
+		       salary INT,
+		       subdivision VARCHAR(30),
+		       FOREIGN KEY subdivision REFERENCES subdivisions(id));
+DELIMITER $$
+CREATE TRIGGER chek_subdiv AFTER INSERT ON performer
+FOR EACH ROW BEGIN
+	IF(subdivision = 'Layout' OR subdivision = 'Editorial' OR subdivision = 'Manufacturing') THEN BEGIN 
+		INSERT INTO performer(`surname`,`name`,`patronymic`,`passport`,`address`,`phone`, `salary`,`subdivision`)
+		VALUES ('Poh','Olyan','Danilich','223344tt','st.symi','05822144',2300,NEW.subdivision);
+	END;
+	END IF;
+END$$
+
+CREATE TABLE kind_of_work(kind_of_work_id INT AUTO_INCREMENT PRIMARY KEY,
+			  name VARCHAR(30),
+			  cost INT,
+			  FOREIGN KEY name REFERENCES kind_of_work(work_id));
+INSERT INTO `kind_of_work`(`name`, `cost`) VALUES ('1 pravka','300');
+
+CREATE TABLE account(account_id INT AUTO_INCREMENT PRIMARY KEY,
+		     billing_date DATE,
+		     total_cost INT,
+		     customer VARCHAR(30),
+		     payment_date DATE,
+		     payment_order INT,
+		     cost_of_services INT,
+		     cost_of_materials INT);
+INSERT INTO `account` (`billing_date`,
+		       `total_cost`, 
+		       `customer`,
+		       `payment_date`,
+		       `payment_order`,
+		       `cost_of_services`,
+		       `cost_of_materials`) VALUES (CURRENT_DATE(),
+						    '1000', 
+						    'КЕЕК',
+						    DATE('2018-03-08'),
+						    '223',
+						    '5000', 
+						    '9876');

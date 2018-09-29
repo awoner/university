@@ -1,0 +1,77 @@
+Turbo Assembler	 Version 4.0	    02/11/18 18:25:17	    Page 1
+art.asm
+
+
+
+      1	0000			     .MODEL tiny
+      2	0000			     .DATA
+      3	0000  00 FF		     i db 0, 255
+      4	0002  01		     i1	db -255
+      5	0003  80 7F		     ii	db -128, 127
+      6				     ;------------------------
+      7	0005  7B		     a db 123;				     -
+      8	0006  79		     b db 121;				     -
+      9	0007  85		     a1	db -123;			     -
+     10	0008  87		     b1	db -121;			     -
+     11				     ;------------------------
+     12	0009  FF01		     r0	dw -255
+     13	000B  0000 FFFF		     r dw 0, 65535
+     14	000F  FFFF 8000		     r1	dw -1, -32768
+     15	0013  0001 7FFF		     r2	dw 1, 32767
+     16	0017  0001		     r3	dw -65535
+     17	0019  FFFF0001		     r4	dd -65535
+     18				     ;------------------------
+     19	001D  0620		     m dw 1568;				     -
+     20	001F  061E		     n dw 1566;				     -
+     21	0021  F9E0		     m1	dw -1568;		     -
+     22	0023  F9E2		     n1	dw -1566;		     -
+     23				     ;------------------------
+     24				     end
+Turbo Assembler	 Version 4.0	    02/11/18 18:25:17	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "02/11/18"
+??FILENAME			  Text	 "art	  "
+??TIME				  Text	 "18:25:17"
+??VERSION			  Number 0400
+@32BIT				  Text	 0
+@CODE				  Text	 DGROUP
+@CODESIZE			  Text	 0
+@CPU				  Text	 0101H
+@CURSEG				  Text	 _DATA
+@DATA				  Text	 DGROUP
+@DATASIZE			  Text	 0
+@FILENAME			  Text	 ART
+@INTERFACE			  Text	 00H
+@MODEL				  Text	 1
+@STACK				  Text	 DGROUP
+@WORDSIZE			  Text	 2
+A				  Byte	 DGROUP:0005
+A1				  Byte	 DGROUP:0007
+B				  Byte	 DGROUP:0006
+B1				  Byte	 DGROUP:0008
+I				  Byte	 DGROUP:0000
+I1				  Byte	 DGROUP:0002
+II				  Byte	 DGROUP:0003
+M				  Word	 DGROUP:001D
+M1				  Word	 DGROUP:0021
+N				  Word	 DGROUP:001F
+N1				  Word	 DGROUP:0023
+R				  Word	 DGROUP:000B
+R0				  Word	 DGROUP:0009
+R1				  Word	 DGROUP:000F
+R2				  Word	 DGROUP:0013
+R3				  Word	 DGROUP:0017
+R4				  Dword	 DGROUP:0019
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DGROUP				  Group
+  _DATA				  16  0025 Word	  Public  DATA
+  _TEXT				  16  0000 Word	  Public  CODE
+

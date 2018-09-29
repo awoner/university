@@ -1,0 +1,198 @@
+body > div {
+ margin: 10px;
+	display: inline-block;
+  width: 500px;
+  height: 309px;
+  background-color: coral;
+  -webkit-transition: all 0.3s ease;;
+  -moz-transition: all 0.3s ease;;
+  -o-transition: all 0.3s ease;;
+  transition: all 0.3s ease;
+}
+body > div > a{
+	font-size: 65px;
+	font-family: 'impact';
+	color: white;
+	text-align: center;
+	line-height: 300px;
+	padding-left: 27px;
+}
+
+.threed:hover {
+  background:#53ea93;
+}
+.threed1:hover {
+  box-shadow: inset 0 0 0 23px #53ea93;
+}
+@-webkit-keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+ 
+@keyframes swing {
+  15% {
+    -webkit-transform: translateX(9px);
+    transform: translateX(9px);
+  }
+  30% {
+    -webkit-transform: translateX(-9px);
+    transform: translateX(-9px);
+  }
+  40% {
+    -webkit-transform: translateX(6px);
+    transform: translateX(6px);
+  }
+  50% {
+    -webkit-transform: translateX(-6px);
+    transform: translateX(-6px);
+  }
+  65% {
+    -webkit-transform: translateX(3px);
+    transform: translateX(3px);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+  .threed2:hover {
+  -webkit-animation: swing 0.6s ease;
+  animation: swing 0.6s ease;
+   -webkit-animation-iteration-count: 1;
+   animation-iteration-count: 1;
+}
+.threed3 {
+opacity: 1;
+}
+.threed3:hover {
+ opacity: 0.6;
+}
+.threed4:hover {
+  -webkit-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform: scale(0.8);
+
+}
+.threed5:hover {
+  border-radius: 100%;
+}
+
+.threed6:hover{
+	  -webkit-transform: rotateZ(20deg) scale(0.7);;
+  -ms-transform: rotateZ(20deg) scale(0.7);;
+  transform: rotateZ(20deg) scale(0.7);;
+	 
+}
+.threed8:hover{
+	  -webkit-transform: rotateZ(360deg) scale(1.4);
+  -ms-transform: rotateZ(360deg) scale(1.4);
+  transform: rotateZ(360deg) scale(1.4);
+	background:#53ea93;
+	 
+}
+.threed7:hover{
+	
+	  box-shadow:
+    1px 1px #53ea93,
+    2px 2px #53ea93,
+    3px 3px #53ea93,
+    4px 4px #53ea93,
+    5px 5px #53ea93,
+    6px 6px #53ea93,
+    7px 7px #53ea93,
+	8px 8px #53ea93,
+    9px 9px #53ea93,
+    10px 10px #53ea93,
+    11px 11px #53ea93;
+  -webkit-transform: translateX(-11px);
+  transform: translateX(-11px);
+}
+
+.square6 {
+    width: 60px;
+    height: 60px;
+    color: coral;
+    background-color: coral;
+    animation: m 10s linear 10000;
+}
+
+.square5 {
+    width: 60px;
+    height: 60px;
+    color: coral;
+    background-color: coral;
+    animation: m 9s linear 10000;
+}
+.square4 {
+    width: 60px;
+    height: 60px;
+    color: coral;
+    background-color: coral;
+    animation: m 8s linear 10000;
+}
+.square3 {
+    width: 60px;
+    height: 60px;
+    color: coral;
+    background-color: coral;
+    animation: m 7s linear 10000;
+}
+.square2 {
+    width: 60px;
+    height: 60px;
+    color: coral;
+    background-color: coral;
+    animation: m 5s linear 10000;
+}
+.square1 {
+    width: 60px;
+    height: 60px;
+    color: coral;
+    background-color: coral;
+    animation: m 2s linear 10000;
+}
+.namesp {
+    color: yellow;
+    font-size: 25px;
+    text-align: center;
+}
+
+.namesp1 {
+	font-size: 60px;
+	color:coral;
+    transition: all 2s;
+	font-family: 'impact'
+}
+.namesp1:hover{
+    font-size: 100px;
+    color: #53ea93;
+}
+@keyframes m {
+    50%{
+        margin-left: 1000px;
+        background-color: #53ea93;
+        color: #53ea93;
+    }
+}

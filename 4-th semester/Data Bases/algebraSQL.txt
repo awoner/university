@@ -1,0 +1,24 @@
+CREATE TABLE gasoline_car(brand VARCHAR(10),
+                          model VARCHAR(10),
+                          max_speed INT);
+CREATE TABLE electro_car(brand VARCHAR(10),
+                          model VARCHAR(10),
+                          max_speed INT);
+INSERT INTO gasoline_car(brand, model, max_speed)VALUES('Shkoda', 'F123RT', 200);
+INSERT INTO gasoline_car(brand, model, max_speed)VALUES('Ferrari', 'V54R3B', 130);
+INSERT INTO gasoline_car(brand, model, max_speed)VALUES('Reno', 'R325BX', 80);
+INSERT INTO gasoline_car(brand, model, max_speed)VALUES('Volvo', 'VLV354', 200);
+INSERT INTO electro_car(brand, model, max_speed)VALUES('Tesla', 'MDL323', 245);
+INSERT INTO electro_car(brand, model, max_speed)VALUES('Mercedes', 'MSLD343', 206);
+INSERT INTO electro_car(brand, model, max_speed)VALUES('Volvo', 'VLV567', 200);
+SELECT * FROM electro_car UNION SELECT * FROM gasoline_car;					
+SELECT * FROM electro_car WHERE EXISTS (SELECT * FROM gasoline_car
+		 			WHERE electro_car.max_speed=gasoline_car.max_speed);
+SELECT * FROM electro_car WHERE NOT EXISTS (SELECT * FROM gasoline_car
+					WHERE electro_car.max_speed=gasoline_car.max_speed);
+SELECT * FROM electro_car, gasoline_car;						
+SELECT * FROM electro_car WHERE electro_car.max_speed=200;				
+SELECT DISTINCT brand, max_speed FROM electro_car;						
+SELECT * FROM electro_car, gasoline_car WHERE electro_car.max_speed = gasoline_car.max_speed;	
+SELECT electro_car.brand FROM electro_car, gasoline_car						
+ WHERE electro_car.max_speed=gasoline_car.max_speed AND gasoline_car.brand=electro_car.brand;

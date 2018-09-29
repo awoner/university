@@ -1,0 +1,47 @@
+a{
+	display:inline-block;
+	text-decoration: none;
+	color: whitesmoke;
+	background: crimson;
+	border: crimson;
+	border-radius: 5px;
+	padding: 5px;
+	transition: background 1s;
+}
+
+button{
+	color: whitesmoke;
+	background: royalblue;
+	border: crimson;
+	border-radius: 5px;
+	padding: 10px;
+	transition: background 1s;
+}
+
+form input{
+	background: skyblue;
+	border: crimson;
+	border-radius: 5px;
+	transition: background 1s;
+}
+
+li{
+	margin-bottom: 10px;
+	list-style-type: none;
+}
+
+form{
+	color: royalblue;
+}
+
+a:hover{
+	background: darkred;
+}
+
+button:hover{
+	background: darkblue;
+}
+
+form input:hover{
+	background: royalblue;
+}

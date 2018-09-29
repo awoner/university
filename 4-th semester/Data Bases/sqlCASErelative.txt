@@ -1,0 +1,38 @@
+CREATE TABLE `user`(user_id INT AUTO_INCREMENT PRIMARY KEY,
+                   user_name VARCHAR(30),
+                   user_surname VARCHAR(30),
+                   user_nick VARCHAR(30),
+                   user_age INT);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Leha', 'Artamonov', 'Lexus', 18);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Lehich', 'Garnich', 'Mario', 17);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Ivan', 'Belanov', 'Vanish', 22);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Evgen', 'Vasiliev', 'Smell22', 18);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Den', 'Truhan', 'Deniska228', 17);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Artem', 'Ivanov', 'Magickkek', 22);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Oleksandr', 'Petrov', 'Gan', 38);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Vitaliy', 'Zakrevskiy', 'agr', 13);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Maksim', 'Mamray', 'xannx', 20);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Ilya', 'Archuadze', 'kent', 21);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Aleksey', 'Chenyshow', 'tazaret', 15);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Pavel', 'Volkin', 'shum', 32);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Yuriy', 'Danko', 'velik4', 36);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Slavik', 'Martynov', 'fallen31', 12);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Bogdan', 'Zaseka', 'bodyani4', 25);
+INSERT INTO user(user_name, user_surname, user_nick, user_age) VALUES('Andrey', 'Mikolyuk', 'mikolyan', 16);
+SELECT user_name FROM user WHERE user_age >= 17 AND user_age <= 20;
+SELECT user_name, user_age FROM user WHERE (user_age = 18 OR user_age = 22) 
+						AND user_name = 'Leha' ORDER BY user_age;
+SELECT * FROM user WHERE user_name LIKE 'A%';
+SELECT * FROM user WHERE user_name LIKE '__h%';
+SELECT user_name FROM user WHERE user_age IN(18,22);
+SELECT user_name FROM user WHERE user_age BETWEEN 17 AND 20;//a < b
+SELECT user_name FROM user WHERE user_age NOT BETWEEN 17 AND 20;
+UPDATE user SET user_name='Evgeniy' WHERE user_name='Evgen';
+UPDATE user SET user_age=user_age+1;
+SELECT user_name, user_age,
+CASE
+    WHEN user_age = 18 THEN "The age is 18"
+    WHEN user_age = 22 THEN "The age is 22"
+    ELSE "The age is something else"
+END
+FROM user;

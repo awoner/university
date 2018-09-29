@@ -1,0 +1,51 @@
+Turbo Assembler	 Version 4.0	    02/27/18 22:31:10	    Page 1
+prv.asm
+
+
+
+      1	0000			     text    segment			     
+      2				     assume  CS:text, DS:data		     
+      3									     
+      4	0000  B8 0000s		     begin:  mov     AX, data		     
+      5	0003  8E D8			     mov     DS, AX		     
+      6	0005  B4 09			     mov     AH, 09h		     
+      7	0007  BA 0000r			     mov     DX, offset	mesg	     
+      8				     бути в DX
+      9	000A  CD 21			     int     21h		     
+     10	000C  B4 4C			     mov     AH, 4Ch		     
+     11	000E  B0 00			     mov     Al, 0		     
+     12	0010  CD 21			     int     21h		     
+     13	0012			     text    ends			    
+     14	0000			     data    segment			     
+     15	0000  4E 41 43 48 49 4E	41+  mesg    db	"NACHINAEM ! $"		     
+     16	      45 4D 20 21 20 24
+     17	000D			     data    ends			    
+     18	0000			     stk     segment stack		     
+     19	0000  0100*(00)			     db	256 dup	(0)		     
+     20	0100			     stk     ends			     
+     21					     end begin			     
+Turbo Assembler	 Version 4.0	    02/27/18 22:31:10	    Page 2
+Symbol Table
+
+
+
+
+Symbol Name			  Type	 Value
+
+??DATE				  Text	 "02/27/18"
+??FILENAME			  Text	 "prv	  "
+??TIME				  Text	 "22:31:10"
+??VERSION			  Number 0400
+@CPU				  Text	 0101H
+@CURSEG				  Text	 STK
+@FILENAME			  Text	 PRV
+@WORDSIZE			  Text	 2
+BEGIN				  Near	 TEXT:0000
+MESG				  Byte	 DATA:0000
+
+Groups & Segments		  Bit Size Align  Combine Class
+
+DATA				  16  000D Para	  none
+STK				  16  0100 Para	  Stack
+TEXT				  16  0012 Para	  none
+

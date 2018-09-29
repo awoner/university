@@ -1,0 +1,21 @@
+<ul>
+<li><a href = "Женщина"></li>
+<li><a href = "Нижнее белье"></li>
+<li><a href = "Мужчина"></li>
+<li><a href = "Ребенок"></li>
+<li><a href = "Обувь и аксессуары"></li>
+<li><a href = "Дом"></li>
+<li><a href = "Вдохновение"></li>
+<li><a href = "О нас"></li>
+</ul>
+menu ul {
+	overflow: hidden;
+}
+menu ul li {
+	float: left;
+}
+menu ul li a {
+	padding: 15px;
+	display: block; 
+	color: #fff;
+}

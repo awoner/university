@@ -1,0 +1,7 @@
+DirectoryIndex index.php  # путь у главному файлу(что бы не создаваать обязательно index.php)
+RewriteEngine on	 # модуль преобразования(для наших фейуовых страничек)
+AddDefaultCharset UTF-8	 # кодировка нашего сайта
+
+# основной домен
+RewriteCond %(HTTP_HOST) ^\.(.*) [NC] #RewriteCond %(HTTP_HOST) ^www\.(.*) [NC]
+RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
