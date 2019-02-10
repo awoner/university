@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Functional programming</title>
+</head>
+<body>
+	<script type="text/javascript" src="graph/EJSCharts/EJSChart.js">
+		
+	</script>
+  	<script type="text/javascript">
+		 document.write("<h1><b>Lab 1</b></h1>");
+
+  		function defun1(x) {
+			return x*x - 3*x + 2;
+		}
+
+		function defun5(x) {
+			return Math.log(x*x - 3*x + 2);
+		}
+
+		function process() {
+			document.write("<h2><b>y=x*x-3x+2</b></h2>");
+			for(var i = 0; i < 3; i += 0.1) {
+				document.write(defun1(i) + '<br>');
+			}
+
+			document.write("<h2><br><b>y=ln(x*x-3x+2)</b></h2>");		
+			var i = 0;
+			while(i < 3) {
+				document.write(defun5(i) + '<br>');
+				i += 0.1;
+			}
+		}
+
+		process();
+//------------------------------------------------------------------------
+		document.write("<br><h1><b>Lab 3</b></h1>");
+		var sum = 0;
+ 		for (var i = 1; i <= 3; i++) {
+ 			for (var j = 1; j <= 2; j++) {
+ 				sum += (i + j/i);
+ 			}
+ 		}
+
+ 		document.write("<h2>Total by for: " + sum + "</h2>");
+
+ 		function f1(i, j){
+ 			if(i != 1)
+ 				return f2(i, j) + f1(i - 1, j);
+ 			else
+ 				return f2(i, j);
+ 		}
+
+ 		function f2(i, j){
+ 			if(j != 1)
+ 				return (i + j/i) + f2(i, j - 1); 
+ 			else
+ 				return i + j/i;
+ 		}
+
+ 		sum = f1(3, 2);
+ 		document.write("<h2>Total by recursion: " + sum + "</h2>");
+//------------------------------------------------------------------------
+ 		function list() {
+
+		  this.head = null;
+		  this.tail = null;
+
+		  this.createNode=function(data) {
+		    return {data: data, next: null }
+		  };
+
+		  this.addNode=function(data) {
+		    if (this.head == null) {
+		      this.tail = this.createNode(data);
+		      this.head = this.tail;
+		    } else {
+		      this.tail.next = this.createNode(data);
+		      this.tail = this.tail.next;
+		    }
+		  };
+
+		  this.printNode=function() {
+		    var x = this.head;
+		    while (x != null) {
+		      document.write(x.data + " ");
+		      x = x.next;
+		    }
+		    document.write("<br>");
+		  };
+		}
+
+		var list1 = new list();
+		var list2 = new list();
+		for (var i = 10; i >= 0; i--) {
+			list1.addNode(i);
+			list2.addNode(i + i);
+		}
+
+		list1.printNode();
+		list2.printNode();
+
+		list3 = new list();
+
+		var x = list1.head;
+		var y = list2.head;
+	    while (x != null) {
+	      	list3.addNode(x.data * y.data);
+		    x = x.next;
+		    y = y.next;
+		}
+
+		list3.printNode();
+
+		x = list3.head;
+		var tmp, tmp1;
+		while(x != null){
+			tmp1 = x.next;
+			if(x.data > tmp1.data){
+				tmp = x.data;
+				x.data = tmp1.data;
+				x.next.data = tmp;
+			}
+			x = x.next;
+		}
+		list3.printNode();
+
+
+ 	</script>
+</body>
+</html>
