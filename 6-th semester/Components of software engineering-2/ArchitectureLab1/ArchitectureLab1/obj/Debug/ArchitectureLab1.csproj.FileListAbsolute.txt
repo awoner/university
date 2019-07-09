@@ -1,0 +1,7 @@
+D:\VisualStudioProjects\ArchitectureLab1\ArchitectureLab1\bin\Debug\ArchitectureLab1.exe.config
+D:\VisualStudioProjects\ArchitectureLab1\ArchitectureLab1\bin\Debug\ArchitectureLab1.exe
+D:\VisualStudioProjects\ArchitectureLab1\ArchitectureLab1\bin\Debug\ArchitectureLab1.pdb
+D:\VisualStudioProjects\ArchitectureLab1\ArchitectureLab1\obj\Debug\ArchitectureLab1.csproj.CoreCompileInputs.cache
+D:\VisualStudioProjects\ArchitectureLab1\ArchitectureLab1\obj\Debug\ArchitectureLab1.exe
+D:\VisualStudioProjects\ArchitectureLab1\ArchitectureLab1\obj\Debug\ArchitectureLab1.pdb
+D:\VisualStudioProjects\ArchitectureLab1\ArchitectureLab1\obj\Debug\ArchitectureLab1.csprojAssemblyReference.cache

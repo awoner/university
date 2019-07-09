@@ -1,0 +1,11 @@
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\bin\Debug\netcoreapp2.2\TranslatorLab9.deps.json
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\bin\Debug\netcoreapp2.2\TranslatorLab9.runtimeconfig.json
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\bin\Debug\netcoreapp2.2\TranslatorLab9.runtimeconfig.dev.json
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\bin\Debug\netcoreapp2.2\TranslatorLab9.dll
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\bin\Debug\netcoreapp2.2\TranslatorLab9.pdb
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\obj\Debug\netcoreapp2.2\TranslatorLab9.csprojAssemblyReference.cache
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\obj\Debug\netcoreapp2.2\TranslatorLab9.csproj.CoreCompileInputs.cache
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\obj\Debug\netcoreapp2.2\TranslatorLab9.AssemblyInfoInputs.cache
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\obj\Debug\netcoreapp2.2\TranslatorLab9.AssemblyInfo.cs
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\obj\Debug\netcoreapp2.2\TranslatorLab9.dll
+D:\VisualStudioProjects\TranslatorLab9\TranslatorLab9\obj\Debug\netcoreapp2.2\TranslatorLab9.pdb
